@@ -9,7 +9,7 @@ script:
 - bundle exec rake travis --trace
 after_script:
 - bundle exec kitchen destroy
-- echo `md5 ~/.ssh/id_do.pem`
+- echo `md5sum ~/.ssh/id_do.pem`
 - cat .kitchen/logs/*
 env:
   global:
