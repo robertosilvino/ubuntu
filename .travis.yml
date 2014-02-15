@@ -1,14 +1,14 @@
 language: ruby
 bundler_args: --without kitchen_vagrant
 rvm:
-- 2.0.0
+- 2.1.0
 before_install:
 - echo -n $DO_KEY_CHUNK_{0..30} >> ~/.ssh/id_do.base64
 - cat ~/.ssh/id_do.base64 | tr -d ' ' | base64 --decode > ~/.ssh/id_do.pem
 script:
 - bundle exec rake travis --trace
 after_script:
-- bundle kitchen destroy
+#- bundle exec kitchen destroy
 - echo `md5sum ~/.ssh/id_do.pem`
 - cat .kitchen/logs/*
 env:
