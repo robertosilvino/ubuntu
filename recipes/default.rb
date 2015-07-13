@@ -50,3 +50,9 @@ if node['ubuntu']['locale']
   end
 
 end
+
+if node['ubuntu']['unattended_upgrades']
+  package('unattended-upgrades') { action :install }
+else
+  package('unattended-upgrades') { action :remove }
+end

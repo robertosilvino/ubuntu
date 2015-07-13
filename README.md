@@ -32,9 +32,10 @@ Include `recipe[ubuntu]` on systems where you want to manage the sources.list. C
 
 ## License & Authors
 **Author:** Cookbook Engineering Team ([cookbooks@chef.io](mailto:cookbooks@chef.io))
+**Author:** Roberto Silvino <robertosilvino@gmail.com>
 
 **Copyright:** 2008-2015, Chef Software, Inc.
-
+**Copyright:** 2015-2016, Roberto Silvino 
 ```
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
